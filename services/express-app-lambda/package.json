@@ -1,0 +1,21 @@
+{
+  "name": "claudia-express-lerna",
+  "version": "1.0.0",
+  "description": "Example application for running a Node Express app on AWS Lambda using Amazon API Gateway.",
+  "main": "lambda.js",
+  "scripts": {
+    "claudia:create": "claudia create --name lerna-express --handler lambda.handler --deploy-proxy-api --region us-west-2 --no-optional-dependencies",
+    "claudia:update": "claudia update --no-optional-dependencies",
+    "claudia:destroy": "claudia destroy",
+    "test": "echo 'executing tests...'"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-serverless-express": "^1.3.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "claudia": "^2.10.0"
+  }
+}

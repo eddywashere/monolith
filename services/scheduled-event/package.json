@@ -1,0 +1,26 @@
+{
+  "name": "claudiajs-scheduled-event",
+  "description": "Send logs if a web site is unreachable",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "main.js"
+  ],
+  "scripts": {
+    "claudia:create": "claudia create --name lerna-scheduled --region us-west-2 --handler main.handler --no-optional-dependencies",
+    "claudia:test": "claudia test-lambda --event test.json",
+    "claudia:update": "claudia update --no-optional-dependencies",
+    "claudia:destroy": "claudia destroy",
+    "claudia:schedule": "claudia add-scheduled-event --event test.json --name lerna-scheduled-event --rate '5 minutes'",
+    "test": "echo 'executing tests...'"
+  },
+  "devDependencies": {
+    "claudia": "^2.10.0"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.2.37"
+  },
+  "dependencies": {
+    "got": "^5.4.1"
+  }
+}

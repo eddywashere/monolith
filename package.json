@@ -1,0 +1,17 @@
+{
+  "name": "monolith",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lerna:claudia:create": "lerna run claudia:create",
+    "lerna:claudia:update": "lerna run claudia:update",
+    "lerna:claudia:destroy": "lerna run claudia:destroy",
+    "lerna:claudia:schedule": "lerna run claudia:schedule",
+    "lerna:bootstrap": "lerna bootstrap --npm-client=yarn",
+    "lerna:test": "lerna run test"
+  },
+  "devDependencies": {
+    "lerna": "2.0.0-beta.38"
+  }
+}
